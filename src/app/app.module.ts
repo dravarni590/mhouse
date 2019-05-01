@@ -1,17 +1,53 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+
+// routing
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// schematics
+import { WorkerNavComponent } from './worker-nav/worker-nav.component';
+
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatListModule } from '@angular/material';
+
+// vertical Side Bar
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WorkerNavComponent,
+
   ],
+
   imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+
+
+   // routing
+   AppRoutingModule,
+
+   // material
+   BrowserModule,
+   BrowserAnimationsModule,
+   MatButtonModule,
+   MatIconModule,
+   MatSidenavModule,
+   MatToolbarModule,
+   MatMenuModule,
+   LayoutModule,
+   MatListModule
+],
+
+
+
   providers: [],
   bootstrap: [AppComponent]
 })
